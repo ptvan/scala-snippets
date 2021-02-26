@@ -1,2 +1,2 @@
 # scala-snippets
-snippets of Scala code
+small snippets of Scala code
