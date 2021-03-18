@@ -21,6 +21,13 @@ myString.takeRight(4)
 myString.dropRight(4)
 
 /* CHAPTER 2 */
+import scala.math._
+
+def safeSqrt(x: Int): Double = {
+    if (x > 0){
+        sqrt(x)
+    } else throw new IllegalArgumentException ("input should be positive") 
+}
 
 def signum(x: Int):Int = {
     if (x == 0) 1 else if (x < 0 ) -1 else 0 
