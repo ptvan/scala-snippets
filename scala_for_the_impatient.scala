@@ -32,3 +32,18 @@ def safeSqrt(x: Int): Double = {
 def signum(x: Int):Int = {
     if (x == 0) 1 else if (x < 0 ) -1 else 0 
 }
+
+/* a situation where x = y = 1 is valid */
+var y:Int = 0 
+val x:Unit = y = 1
+
+/* for loop */
+// one approach
+var i = 0
+for (i <- 1 to 10){
+  println(i);
+} 
+
+// another approach
+var i = 0 
+for (i <- 10.to(0, -1)) println(i)
