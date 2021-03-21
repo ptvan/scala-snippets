@@ -47,3 +47,12 @@ for (i <- 1 to 10){
 // another approach
 var i = 0 
 for (i <- 10.to(0, -1)) println(i)
+
+/* procedure, aka function that doesn't return a value */
+def countdown(n: Int): Unit = {
+    for (i <- n.to(0, -1)) println(i)
+}
+
+/* calculates product of Unicode codes of all letters in a string */
+var prod: Long = 1
+for (c <- "Hello") prod *= c.toLong
