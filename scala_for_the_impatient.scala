@@ -1,12 +1,12 @@
 /* CHAPTER 1 */
 
-// 2^2014
-BigInt(2).pow(2014)
-
 // importing
 import scala.BigInt._
 import scala.util._
 probablePrime(100, Random)
+
+// 2^2014
+BigInt(2).pow(2014)
 
 // create random directory name by converting a random BigInt to base36
 probablePrime(100, Random).toString(36)
