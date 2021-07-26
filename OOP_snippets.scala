@@ -1,20 +1,15 @@
-object Main {
-// bare definitions throw error so we need Main {} for this to compile
+import Main.Employee
 
-// typical inheritance using vanilla classes
-class Employee(id: Int, name: String) {
+object Main extends App{
+  // bare definitions throw error so we need Main {} for this to compile
+
+  // typical polymorphism using inheritance of vanilla classes
+class Employee(var id: Int, var name: String) {
 }
 
-class SalaryEmployee(id: Int, name: String, salary:Int) extends Employee(id: Int, name: String) {
-}
-  var alice = new SalaryEmployee(1,"Alice", 1000)
+class SalaryEmployee(id: Int, name: String, var salary: Int)  extends Employee(id, name)  {
 }
 
-// better inheritance with case classes
-/** 1. case class doesn't need `new` to instantiate
-    2. it's good practice to make case classes `final`
-       (see https://nrinaudo.github.io/scala-best-practices/tricky_behaviours/final_case_classes.html)
- **/
-final case class BetterEmployee(id: Int, name: String){
+val employee1 = new SalaryEmployee(1, "Alice", 10000)
+println(employee1.salary)
 }
-
